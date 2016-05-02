@@ -7,7 +7,7 @@ Term project of CIS 700 - Text Mining for Social Media.
 
 `cnn/` -- Convolutional Neural Network for Twitter sentiment.
 
-`lstm/` -- Long-Short Term Memory for sentiment analysis.
+`lstm/` -- Long Short-Term Memory for sentiment analysis.
 
 `doc2vec/` -- paragraph vector 
 
