@@ -27,4 +27,4 @@ information like
   python process.py [train_pos_count] [train_neg_count] -[lr/svm/rf/knn]
 ```
 
-Please notice that the whole process may be very **TIME-CONSUMING**!
+Please notice that the whole process may be very **TIME-CONSUMING** (1-2 hours)!
