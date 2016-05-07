@@ -451,6 +451,8 @@ def pred_error(f_pred, prepare_data, data, iterator, verbose=False):
     return valid_err
 
 
+# In this project, we only use adadelta for LSTM. We have also tuned the parameters
+# for LSTM.
 def train_lstm(
     dim_proj=128,  # word embeding dimension and LSTM number of hidden units.
     patience=10,  # Number of epoch to wait before early stop if no progress
@@ -459,7 +461,7 @@ def train_lstm(
     decay_c=0.,  # Weight decay for the classifier applied to the U weights.
     lrate=0.0001,  # Learning rate for sgd (not used for adadelta and rmsprop)
     n_words=10000,  # Vocabulary size
-    optimizer=rmsprop,  # sgd, adadelta and rmsprop available, sgd very hard to use, not recommanded (probably need momentum and decaying learning rate).
+    optimizer=adadelta,  # sgd, adadelta and rmsprop available, sgd very hard to use, not recommanded (probably need momentum and decaying learning rate).
     encoder='lstm',  # TODO: can be removed must be lstm.
     saveto='lstm_model.npz',  # The best model will be saved there
     validFreq=370,  # Compute the validation error after this number of update.
@@ -662,8 +664,9 @@ def train_lstm(
 
 
 if __name__ == '__main__':
-    # See function train for all possible parameter and there definition.
+    # In the training, we found that when the number of epochs is about 20,
+    # it could obtain the best performance.
     train_lstm(
-        max_epochs=100,
+        max_epochs=20,
         test_size=-1,
     )

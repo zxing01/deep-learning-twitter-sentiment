@@ -11,7 +11,7 @@ LSTM for Twitter Sentiment Analysis
 
 
 ## Execution
-First, please make sure that you have installed all of the dependencies illustrated in
+First, please make sure that you have installed all of the dependencies listed in
 `requirements.txt` file. Then, type
 
 ```

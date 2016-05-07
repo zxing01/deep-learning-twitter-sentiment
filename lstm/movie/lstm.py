@@ -26,7 +26,6 @@ import imdb
 
 datasets = {'imdb': (imdb.load_data, imdb.prepare_data)}
 
-# Set the random number generators' seeds for consistency
 SEED = 500
 numpy.random.seed(SEED)
 
@@ -452,6 +451,8 @@ def pred_error(f_pred, prepare_data, data, iterator, verbose=False):
     return valid_err
 
 
+# In this project, we only use adadelta for LSTM. We have also tuned the parameters
+# for LSTM.
 def train_lstm(
     dim_proj=128,  # word embeding dimension and LSTM number of hidden units.
     patience=10,  # Number of epoch to wait before early stop if no progress
@@ -657,7 +658,8 @@ def train_lstm(
 
 
 if __name__ == '__main__':
-    # See function train for all possible parameter and there definition.
+    # In the training, we found that when the number of epochs is about 20,
+    # it could obtain the best performance.
     train_lstm(
         max_epochs=20,
         test_size=500,
