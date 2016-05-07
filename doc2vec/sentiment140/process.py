@@ -32,11 +32,6 @@ from sklearn.ensemble import RandomForestClassifier
 
 model = Doc2Vec.load('./sentiment140.d2v')
 
-# train_pos_count = 898
-# train_neg_count = 887
-# test_pos_count = 100
-# test_neg_count = 98
-
 if len(sys.argv) < 4:
     print "Please input train_pos_count, train_neg_count and classifier!"
     sys.exit()
