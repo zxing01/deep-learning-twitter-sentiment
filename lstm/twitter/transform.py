@@ -3,7 +3,7 @@
     transform.py
     ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-    This file defines the methods transfrom words into numbers represented by the
+    This file defines the methods to transfrom words into numbers represented by the
     count of occurence in the text corpus.
 """
 

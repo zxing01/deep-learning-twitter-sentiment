@@ -19,7 +19,8 @@ First, please make sure that you have installed all of the dependencies illustra
   bash run.sh
 ```
 
-to execute the script. After the execution, you can run `process.py` file for the classification.
+to execute the script. During the training, the details will be output onto the screen.
+After the execution, you can run `process.py` file for the classification.
 The necessary parameters for that script is defined in `process.py` file. You need to provide
 information like
 
